@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,10 @@
 
     <!-- start header section -->
 
-    <header class="w-4/5 mx-auto">
+    <header class="w-full px-1 lg:py-0 lg:w-4/5 mx-auto">
+
+        <!-- start nav section -->
+
         <nav class="raleway my-5">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -61,7 +64,7 @@
                             <li>Search</li>
                         </ul>
                     </div>
-                    <a class="text-4xl font-extrabold">P-Ticket</a>
+                    <a class="text-2xl lg:text-4xl font-extrabold">P-Ticket</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="flex gap-10 text-xl text-second-color">
@@ -72,11 +75,62 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn text-first-color border-2 bg-first-color/10 border-first-color/40">Button <span><img
-                                src="./images/bus-icon.png" alt="error"></span></button>
+                    <button class="btn text-first-color border-2 bg-first-color/10 border-first-color/40">Button
+                        <span><img src="./images/bus-icon.png" alt="error"></span></button>
                 </div>
             </div>
         </nav>
+
+        <!-- end nav section -->
+
+        <!-- start banner section -->
+
+        <div
+            class="raleway banner bg-[url(../images/banner.png)] bg-center bg-no-repeat bg-cover py-10 lg:py-20 rounded-3xl">
+            <div class="hero-content text-center">
+                <div class="max-w-full lg:max-w-2xl space-y-3 lg:space-y-10 mb-16">
+                    <h1 class="text-3xl lg:text-6xl text-white font-extrabold lg:!leading-normal">End-to-End Travel
+                        with<br><span class="text-first-color">P
+                            Paribahan</span></h1>
+                    <p class="inter text-xs lg:text-xl text-white ">Yes, you can run unit tests and view the results
+                        directly within
+                        the app. The
+                        integrated testing features allow for a streamlined .</p>
+                    <button class="btn bg-first-color text-black font-bold border-none">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+        <div class="inter lg:w-4/5 mx-auto flex justify-between items-center -mt-16">
+            <div class="bg-white p-3 lg:p-7 border-b-4 border-first-color rounded-3xl">
+                <div class="flex items-center gap-2 lg:gap-4">
+                    <div><img src="./images/people.png" alt="error"></div>
+                    <div class="space-y-1 lg:space-y-2">
+                        <h3 class="text-base lg:text-4xl font-bold">500K+</h3>
+                        <p class="text-xs lg:text-xl text-second-color">Registered users</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-3 lg:p-7 border-b-4 border-first-color rounded-3xl">
+                <div class="flex items-center gap-2 lg:gap-4">
+                    <div><img src="./images/ticket-cupon.png" alt="error"></div>
+                    <div class="space-y-1 lg:space-y-2">
+                        <h3 class="text-base lg:text-4xl font-bold">1.7 lacks</h3>
+                        <p class="text-xs lg:text-xl text-second-color">Tickets sold</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-3 lg:p-7 border-b-4 border-first-color rounded-3xl">
+                <div class="flex items-center gap-2 lg:gap-4">
+                    <div><img src="./images/stoppage.png" alt="error"></div>
+                    <div class="space-y-1 lg:space-y-2">
+                        <h3 class="text-base lg:text-4xl font-bold">80K+</h3>
+                        <p class="text-xs lg:text-xl text-second-color">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start banner section -->
+
     </header>
 
     <!-- end header section -->
