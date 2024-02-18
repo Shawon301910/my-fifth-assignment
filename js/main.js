@@ -19,7 +19,8 @@ for(const button of buttons) {
 
         const selectSeatNum = document.getElementById("selected-seat-num").innerText;
         const selectSeatNumInt = parseInt(selectSeatNum);
-        console.log(selectSeatNum)
+
+        
         
         if(seatsLeftInt > 36) {
 
@@ -35,9 +36,14 @@ for(const button of buttons) {
             // selected seats number ---------------------
 
             const selectedNum = selectSeatNumInt + 1;
-            showElement("selected-seat-num", selectedNum)
+            showElement("selected-seat-num", selectedNum);
+
+            // get ticket info container child & show --------------
+
+            const getContainerChild = document.getElementById("ticket-info-container");
+            const getTicketInfo = showTicketInfo(selected);
+            getContainerChild.appendChild(getTicketInfo)
         }
-        
     })
 }
 
