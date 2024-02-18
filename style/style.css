@@ -8,7 +8,11 @@
     font-family: "Raleway", sans-serif;
 }
 
-.common-btn {
+html {
+    scroll-behavior: smooth;
+}
+
+.extra {
     background-color: #1DD100;
     color: #fff;
 }
