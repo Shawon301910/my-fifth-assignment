@@ -11,7 +11,7 @@ function showElement(elementId, value) {
 
 function showTicketInfo(value) {
     const div = document.createElement('div');
-    div.classList.add("flex", "justify-between", "pb-3");
+    div.classList.add("text-[10px]", "lg:text-base", "flex", "justify-between", "pb-1", "lg:pb-3");
 
     const p1 = document.createElement('p');
     p1.innerText = value;
