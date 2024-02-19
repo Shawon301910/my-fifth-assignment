@@ -349,7 +349,7 @@
                                 <div class="">
                                     <label class="input h-16 input-bordered flex items-center gap-2 !rounded-xl">
                                         <input id="give-discount" type="text" placeholder="Have any copupon?" />
-                                        <button id="get-discount" class="extra p-3 rounded-lg">Apply</button>
+                                        <button id="get-discount" class="bg-first-color/50 text-white/50 p-3 rounded-lg" disabled>Apply</button>
                                     </label>
                                 </div>
                                 <div class="flex justify-between py-4">
@@ -367,7 +367,7 @@
                                 </div>
                                 <div class="my-5">
                                     <label class="text-xl font-extrabold">Phone Number*</label>
-                                    <input type="number" placeholder="Enter your phone number"
+                                    <input id="type-number" type="number" placeholder="Enter your phone number"
                                         class="w-full text-lg border-2 mt-4 px-5 py-3 rounded-2xl">
                                 </div>
                                 <div class="my-5">
@@ -375,8 +375,8 @@
                                     <input type="email" placeholder="Enter your email id"
                                         class="w-full text-lg border-2 mt-4 px-5 py-3 rounded-2xl">
                                 </div>
-                                <button
-                                    class="common-btn w-full text-xl font-extrabold py-4 my-3 rounded-2xl">Next</button>
+                                <button id="next-button"
+                                    class="bg-first-color/50 text-white/50 w-full text-xl font-extrabold py-4 my-3 rounded-2xl" disabled>Next</button>
                                 <div class="flex justify-around my-2">
                                     <p class="text-sm text-second-color font-medium border-b-2 border-black/30">Terms
                                         and Conditions</p>

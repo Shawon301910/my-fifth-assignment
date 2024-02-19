@@ -28,3 +28,12 @@ function showTicketInfo(value) {
 
     return div;
 }
+
+function next(givNumber, seatCount) {
+    if (!isNaN(givNumber) && seatCount >= 1) {
+        const enableNextBtn = document.getElementById("next-button");
+        enableNextBtn.classList.remove("bg-first-color/50", "text-white/50");
+        enableNextBtn.classList.add("extra");
+        enableNextBtn.removeAttribute("disabled");
+    }
+}
