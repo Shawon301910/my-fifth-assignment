@@ -127,7 +127,7 @@ document.getElementById("next-button").addEventListener("click", function(){
     
     for(const hideElement of hideElements) {
         hideElement.classList.add("hidden");
-        const show = document.getElementById("show-element");
+        const show = document.getElementById("popup");
         show.classList.remove("hidden");
     }
 })
