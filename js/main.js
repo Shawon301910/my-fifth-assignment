@@ -107,6 +107,13 @@ document.getElementById("get-discount").addEventListener('click', function () {
         showElement("total-money", totalMoney);
     }
 
+    const disabledApply = document.getElementById("click-disable");
+    if (giveDiscount.length >= 1) {
+        disabledApply.classList.add("hidden")
+        console.log(disabledApply.innerText)
+    }
+    console.log(giveDiscount)
+    console.log(typeof giveDiscount)
 })
 
 // enable next button ----------------------
@@ -120,12 +127,13 @@ document.getElementById("type-number").addEventListener("keyup", function (event
     next(elementInt, selectSeatInt)
 })
 
+
 // next button popup -----------------------
 
-document.getElementById("next-button").addEventListener("click", function(){
+document.getElementById("next-button").addEventListener("click", function () {
     const hideElements = document.getElementsByClassName("hide-element");
-    
-    for(const hideElement of hideElements) {
+
+    for (const hideElement of hideElements) {
         hideElement.classList.add("hidden");
         const show = document.getElementById("popup");
         show.classList.remove("hidden");
