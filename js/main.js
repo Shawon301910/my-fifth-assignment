@@ -20,13 +20,14 @@ for (const button of buttons) {
         const selectSeatNum = document.getElementById("selected-seat-num").innerText;
         const selectSeatNumInt = parseInt(selectSeatNum);
 
-
-
         if (seatsLeftInt > 36) {
 
             // selected ticket ---------------------------
 
             overlay(selected);
+
+            const getInfoBtn = document.getElementById(selected);
+            getInfoBtn.setAttribute("disabled", true)
 
             // seats available ---------------------------
 
@@ -43,6 +44,7 @@ for (const button of buttons) {
             const getContainerChild = document.getElementById("ticket-info-container");
             const getTicketInfo = showTicketInfo(selected);
             getContainerChild.appendChild(getTicketInfo)
+
 
             // get total ticket taka ---------------------------
 
@@ -61,6 +63,7 @@ for (const button of buttons) {
             }
 
             showElement("total-price", total);
+            showElement("total-money", total);
 
             // select 4 element to get discount ---------------
 
@@ -88,6 +91,8 @@ for (const button of buttons) {
             const numberElementInt = parseInt(numberElement);
 
             next(numberElementInt, selectSeatInt);
+        } else {
+            alert("Can't select, you reach your limit. You can select only four seats.");
         }
     })
 }
@@ -96,14 +101,19 @@ document.getElementById("get-discount").addEventListener('click', function () {
     const getElement = document.getElementById("total-price").innerText;
     const getElementInt = getElement;
     const giveDiscount = document.getElementById("give-discount").value;
+    const getDiscount = document.getElementById("showed-discount");
+    getDiscount.classList.remove("hidden");
+    getDiscount.classList.add("flex")
 
     if (giveDiscount === "NEW15") {
         const discount = (15 / 100) * getElementInt;
         const totalMoney = getElementInt - discount;
+        showElement("total-discount", discount);
         showElement("total-money", totalMoney);
     } else if (giveDiscount === "Couple 20") {
         const discount = (20 / 100) * getElementInt;
         const totalMoney = getElementInt - discount;
+        showElement("total-discount", discount);
         showElement("total-money", totalMoney);
     }
 
