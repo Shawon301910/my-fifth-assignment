@@ -22,6 +22,7 @@ function showTicketInfo(value) {
     div.appendChild(p2);
 
     const p3 = document.createElement('p');
+    p3.classList.add("ticket-taka")
     p3.innerText = "550";
     div.appendChild(p3);
 

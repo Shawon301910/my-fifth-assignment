@@ -43,8 +43,27 @@ for(const button of buttons) {
             const getContainerChild = document.getElementById("ticket-info-container");
             const getTicketInfo = showTicketInfo(selected);
             getContainerChild.appendChild(getTicketInfo)
+
+            // get total ticket taka ---------------------------
+
+            const getTakas = document.getElementsByClassName("ticket-taka");
+            const totalPrices = [];
+            let total = 0;
+            
+            for(const getTaka of getTakas) {
+                const taka = getTaka.innerText;
+                const takaInt = parseInt(taka);
+                totalPrices.push(takaInt);
+            }
+
+            for(const totalPrice of totalPrices) {
+                total += totalPrice;
+            }
+
+            showElement("total-price", total);
         }
     })
 }
+
 
 // console.log(buttons)
