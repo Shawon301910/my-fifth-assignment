@@ -49,7 +49,7 @@ for(const button of buttons) {
             const getTakas = document.getElementsByClassName("ticket-taka");
             const totalPrices = [];
             let total = 0;
-            
+
             for(const getTaka of getTakas) {
                 const taka = getTaka.innerText;
                 const takaInt = parseInt(taka);
@@ -64,6 +64,23 @@ for(const button of buttons) {
         }
     })
 }
+
+document.getElementById("get-discount").addEventListener('click', function(){
+    const getElement = document.getElementById("total-price").innerText;
+    const getElementInt = getElement;
+    const giveDiscount = document.getElementById("give-discount").value;
+    
+    if(giveDiscount === "NEW15") {
+        const discount = (15 / 100) * getElementInt;
+        const totalMoney = getElementInt - discount;
+        showElement("total-money", totalMoney);
+    } else if(giveDiscount === "Couple 20") {
+        const discount = (20 / 100) * getElementInt;
+        const totalMoney = getElementInt - discount;
+        showElement("total-money", totalMoney);
+    }
+    
+})
 
 
 // console.log(buttons)
