@@ -119,3 +119,15 @@ document.getElementById("type-number").addEventListener("keyup", function (event
 
     next(elementInt, selectSeatInt)
 })
+
+// next button popup -----------------------
+
+document.getElementById("next-button").addEventListener("click", function(){
+    const hideElements = document.getElementsByClassName("hide-element");
+    
+    for(const hideElement of hideElements) {
+        hideElement.classList.add("hidden");
+        const show = document.getElementById("show-element");
+        show.classList.remove("hidden");
+    }
+})
