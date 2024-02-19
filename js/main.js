@@ -115,15 +115,16 @@ document.getElementById("get-discount").addEventListener('click', function () {
         const totalMoney = getElementInt - discount;
         showElement("total-discount", discount);
         showElement("total-money", totalMoney);
+    } else {
+        alert("invalid coupon")
     }
 
     const disabledApply = document.getElementById("click-disable");
-    if (giveDiscount.length >= 1) {
+    if (giveDiscount == "NEW15" || giveDiscount == "Couple 20") {
         disabledApply.classList.add("hidden")
         console.log(disabledApply.innerText)
     }
     console.log(giveDiscount)
-    console.log(typeof giveDiscount)
 })
 
 // enable next button ----------------------
